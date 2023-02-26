@@ -9,6 +9,11 @@ The script does:
 4) Upload videos to the configured remote via scp
 
 # Usage
+## GitHub Actions
+This template repository already comes with an pre-built GitHub Actions workflow configuration to automatically schedule the script via CRON. Simply adjust the [`.github/workflows/run.yml`](https://github.com/bumbummen99/youtube-playlist-synchronizer/blob/master/.github/workflows/run.yml) to your needs. 
+
+**Keep in mind that you can create multiple jobs if you want to download multiple playlists. If you want to run these jobs at a different schedule you will have to create multiple workflows files by copying run.yml and adjusting the CRON setting.**
+
 ## Manual
 Make sure you have Google ZX installed on your system:
 ```
@@ -43,8 +48,3 @@ Now you can run the script with the following command:
 # Or specify ZX to run the script
 zx ./youtube-playlist-synchronizer.mjs
 ```
-
-## GitHub Actions
-This template repository already comes with an pre-built GitHub Actions workflow configuration to automatically schedule the script via CRON. Simply adjust the [`.github/workflows/run.yml`](https://github.com/bumbummen99/youtube-playlist-synchronizer/blob/master/.github/workflows/run.yml) to your needs. 
-
-**Keep in mind that you can create multiple jobs if you want to download multiple playlists. If you want to run these jobs at a different schedule you will have to create multiple workflows files by copying run.yml and adjusting the CRON setting.**
