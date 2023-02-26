@@ -1,0 +1,29 @@
+name: Run
+on:
+  # Allos the job to be executed manually
+  workflow_dispatch:
+  # Example: 
+  # New episodes are being released on Friday
+  # Run every Saturday at 00:00am
+  # Use: https://crontab.guru
+  schedule:
+  - cron: "0 0 * * SAT"
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Google ZX
+        run: npm i -g zx
+        
+      - name: Run YouTube-PLaylist-Synchronizer
+        env:
+          PLAYLIST_ID: ${{ secrets.PLAYLIST_ID }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+          SCP_PATH: ${{ secrets.SCP_PATH }}
+        run: ./youtube-playlist-synchronizer.mjs
