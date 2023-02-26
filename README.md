@@ -14,7 +14,7 @@ This template repository already comes with an pre-built GitHub Actions workflow
 
 **Keep in mind that you can create multiple jobs if you want to download multiple playlists. If you want to run these jobs at a different schedule you will have to create multiple workflows files by copying run.yml and adjusting the CRON setting.**
 
-**Attention: This script will not leak any credentials or parameters, still it is NOT advised to run it in a public repository. If you decide to do so you will have to take the responsibility in case information like your password or the path to the ssh key gets leaked.**
+**Attention: This script will not leak any credentials or parameters, also [GitHub will automatically redact secrets](https://docs.github.com/en/github-ae@latest/actions/security-guides/encrypted-secrets#accessing-your-secrets) - still it is NOT advised to run it in a public repository. If you decide to do so you will have to take the responsibility in case information like your password or the path to the ssh key gets leaked.**
 
 ## Manual
 Make sure you have Google ZX installed on your system:
