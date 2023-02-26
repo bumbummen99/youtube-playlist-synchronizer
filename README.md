@@ -12,9 +12,9 @@ The script does:
 ## GitHub Actions
 This template repository already comes with an pre-built GitHub Actions workflow configuration to automatically schedule the script via CRON. Simply adjust the [`.github/workflows/run.yml`](https://github.com/bumbummen99/youtube-playlist-synchronizer/blob/master/.github/workflows/run.yml) to your needs. 
 
-**Keep in mind that you can create multiple jobs if you want to download multiple playlists. If you want to run these jobs at a different schedule you will have to create multiple workflows files by copying run.yml and adjusting the CRON setting.**
+**Keep in mind that you can create multiple jobs if you want to download multiple playlists. If you want to run these jobs at a different schedule you will have to create multiple workflows files by copying run.yml and adjusting the CRON setting. Do NOT get crazy on the CRON schedule as this could flag your account for abuse.**
 
-**Attention: This script will not leak any credentials or parameters, also [GitHub will automatically redact secrets](https://docs.github.com/en/github-ae@latest/actions/security-guides/encrypted-secrets#accessing-your-secrets) - still it is NOT advised to run it in a public repository, your free GitHub Action minutes should totally suffice. Do NOT get crazy on the CRON schedule as this could flag your account for abuse. If you decide to do so you will have to take the responsibility in case information like your password or the path to the ssh key gets leaked.**
+**Attention: This script will not leak any credentials or parameters, also [GitHub will automatically redact secrets](https://docs.github.com/en/github-ae@latest/actions/security-guides/encrypted-secrets#accessing-your-secrets) - still it is NOT advised to run it in a public repository, your free GitHub Action minutes should totally suffice. If you decide to do so you will have to take the responsibility in case information like your password or the path to the ssh key gets leaked.**
 
 ## Manual
 Make sure you have Google ZX installed on your system:
