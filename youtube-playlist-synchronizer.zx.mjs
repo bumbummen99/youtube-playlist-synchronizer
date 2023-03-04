@@ -107,7 +107,7 @@ if (! await installed('ffmpeg')) {
     const tmp = (await $`mktemp -d`).stdout.replace( /[\r\n]+/gm, "" );
 
     // Download latest FFMPEG custom build archive for yt-dlp
-    await fetch('https://github.com/yt-dlp/FFmpeg-Builds/releases/download/latest/ffmpeg-n5.1-latest-linux64-gpl-5.1.tar.xz')
+    await fetch('https://github.com/yt-dlp/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz')
         .then(response => response.body)
         .then(body => writeFile(resolve(tmp, 'ffmpeg.tar.xz'), body))
     
