@@ -10,7 +10,8 @@ on:
   - cron: "0 0 * * SAT"
 
 jobs:
-  stale:
+  sync:
+    name: "Sync Playlist"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
